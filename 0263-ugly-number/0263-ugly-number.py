@@ -4,9 +4,8 @@ class Solution:
             return False
         result=False
         for i in [2,3,5]:
-            if i==2 or i==3 or i==5:
-                while  n%i==0:
-                    n=n//i
+            while  n%i==0:
+                n=n//i
         
         if n==1:
             return True
