@@ -9,23 +9,29 @@
  * }
  */
 class Solution {
-    public static int size(ListNode head){
-        int cnt=0;
-        while(head !=null){
-            cnt++;
-            head=head.next;
-        }
-        return cnt;
-    }
+    // public static int size(ListNode head){
+    //     int cnt=0;
+    //     while(head !=null){
+    //         cnt++;
+    //         head=head.next;
+    //     }
+    //     return cnt;
+    // }
     public ListNode middleNode(ListNode head) {
-        int length=size(head);
-        int mid=length/2;
+        // int length=size(head);
+        // int mid=length/2;
 
-        for(int i=0; i<mid; i++){
-            head=head.next;
+        // for(int i=0; i<mid; i++){
+        //     head=head.next;
+        // }
+        // return head;
+        ListNode slow=head;
+        ListNode fast=head;
+        while(fast !=null && fast.next !=null){
+            slow=slow.next;
+            fast=fast.next.next;
         }
-        return head;
-
+        return slow;
         
     }
 }
